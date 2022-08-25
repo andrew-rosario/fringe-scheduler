@@ -1,0 +1,23 @@
+Notes
+
+Things I Need:
+- I need a csv/Excel of all the dates of the Fringe shows.
+- I need a way to make a ics file.
+-
+
+ABSOLUTE Necessary Features:
+- Generate an ICS file with all the Fringe shows.
+- Use a Fringe/festival CSV formatted in a certain way.
+- Condense all the events into
+- Have at least a CLI user interface.
+
+Features I Want:
+- Ability to remove certain genres you don't want to watch.
+- Ability to account for travel distance (do you have a car, willing to bus, etc.)
+- Ability to consider events you need to be for (work, volunteer shifts, eating, breaks, etc.)
+- Ability to consider range of times you want to be in.
+
+Nice to Have Features:
+- Include price calculations, consider ticket combos.
+- Make universal for any festival or situation where a lot of events are being held at a certain time.
+- Restrict the events within a specific area (for example, the Fringe grounds and surrounding area).
