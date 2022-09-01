@@ -13,6 +13,11 @@ This is just a passion project to fix a problem I've been trying to solve by bru
 
 ----
 
+## In Progress
+
+- CSV processor into SQLite database.
+- Preliminary schedule generation.
+
 
 Things I Need:
 - I need a csv/Excel of all the dates of the Fringe shows.
