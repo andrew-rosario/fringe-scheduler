@@ -5,13 +5,33 @@ from time import sleep
 
 csv_file = None
 
-
-def processor():
+def start():
     pre_check()
-    connection = sqlite3.connect('schedule_database.db')
+    csv_to_database()
 
 
+def csv_to_database(csv_file,use_custom_path=False,database_file_location='schedule_database.db'):
+    connection = None
+    if use_custom_path:
+        file_exists = Path(database_file_location).is_file()
+        if not file_exists:
+            raise Exception("This file does not exist.")
 
+    reader = csv.reader(csv_file, delimiter=',')
+    connection = sqlite3.connect(database_file_location)
+    cursor = connection.cursor()
+    current_line = 0
+
+    for row in reader:
+        if current_line == 0:
+            pass
+        else:
+            query = 'INSERT INTO Outdoor_Shows name,company,genre,data,time,location VALUES ' + row
+            cursor.execute(query)
+            cursor.commit()
+
+    cursor.close()
+    connection.close()
 
 
 
@@ -36,5 +56,3 @@ def pre_check():
                     raise Exception("The first row should adhere to the specifications in the source code.")
         else:
             raise Exception("The CSV file does not exist in root. Put a CSV file in root or use example CSV.")
-
-
