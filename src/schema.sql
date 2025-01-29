@@ -5,10 +5,9 @@ CREATE TABLE shows (
     id INTEGER PRIMARY KEY,
     title TEXT NOT NULL,
     description TEXT,
-    genre TEXT NOT NULL,
     production_company TEXT NOT NULL,
     duration_minutes INTEGER NOT NULL,
-    age_rating TEXT NOT NULL,
+    age_rating TEXT NOT NULL
     )
 ;
 
@@ -51,9 +50,15 @@ There will be a one-to-many relationship between shows and genres. That is, a sh
 
 CREATE TABLE genres (
     id INTEGER PRIMARY KEY,
+    genre TEXT NOT NULL UNIQUE)
+;
+
+CREATE TABLE show_genres(
+    id INTEGER PRIMARY KEY,
     show_id INTEGER NOT NULL,
-    genre TEXT NOT NULL,
-    FOREIGN KEY (show_id) REFERENCES shows(id))
+    genre_id INTEGER NOT NULL,
+    FOREIGN KEY (show_id) REFERENCES shows(id) ON DELETE CASCADE,
+    FOREIGN KEY (genre_id) REFERENCES genres(id) ON DELETE CASCADE)
 ;
 
 /*
@@ -70,5 +75,6 @@ CREATE TABLE price_bands(
     id INTEGER PRIMARY KEY,
     show_id INTEGER NOT NULL,
     band_category TEXT NOT NULL DEFAULT "general",
-    price REAL NOT NULL
+    price REAL NOT NULL,
+    FOREIGN KEY (show_id) REFERENCES shows(id) ON DELETE CASCADE)
 );
