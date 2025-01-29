@@ -1,0 +1,7 @@
+id,title,description,genre,production_company,duration_minutes,age_rating
+1,Hamlet,A Shakespearean tragedy,Drama,Shakespeare Co.,120,PG-13
+2,The Comedy Hour,An hour of hilarious stand-up,Comedy,Laugh Factory,60,PG
+3,Phantom of the Opera,A timeless musical classic,Musical,Opera Productions,150,PG-13
+4,Science Magic Show,Educational and entertaining science tricks,Family,Science Lab,45,G
+5,Macbeth,Another Shakespearean tragedy,Drama,Shakespeare Co.,110,PG-13
+6,Improv Night,Interactive comedy show,Comedy,Comedy Club,75,PG-13

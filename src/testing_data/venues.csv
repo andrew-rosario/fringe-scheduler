@@ -1,0 +1,5 @@
+id,name,address,capacity,latitude,longitude,wheelchair_available,accessible_washroom,adult_only,additional_notes
+1,Grand Theatre,123 Main St,500,53.5461,-113.4938,TRUE,TRUE,FALSE,
+2,Small Stage,45 Side St,100,53.5444,-113.4902,FALSE,FALSE,FALSE,
+3,Main Hall,78 Broadway,800,53.5470,-113.4950,TRUE,TRUE,FALSE,
+4,Outdoor Stage,Park Ave,300,53.5480,-113.4920,TRUE,FALSE,FALSE,Open-air venue
